@@ -1,0 +1,40 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  width: 1280px;
+  margin-inline: auto;
+}
+
+.sidebar {
+  width: 20rem;
+  height: 100vh;
+  overflow: auto;
+  a {
+    display: block;
+    padding-block: 1rem;
+    font-size: 1.8rem;
+    color: #999;
+    white-space: nowrap;
+    &.active {
+      font-weight: 700;
+      color: slateblue;
+    }
+  }
+  details {
+    &[open] {
+      background-color: gray;
+    }
+  }
+  summary {
+    font-size: 2rem;
+    font-weight: 900;
+    list-style: none;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: calc(100vh - 3px);
+  box-sizing: border-box;
+  border: none;
+}

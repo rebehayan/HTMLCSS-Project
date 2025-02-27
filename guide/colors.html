@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <h2>Gray</h2>
+  <ul class="colors gray"></ul>
+  <h2>Red</h2>
+  <ul class="colors red"></ul>
+  <h2>Yellow</h2>
+  <ul class="colors yellow"></ul>
+  <h2>Green</h2>
+  <ul class="colors green"></ul>
+  <h2>Blue</h2>
+  <ul class="colors blue"></ul>
+
+  <script>
+    const lists = document.querySelectorAll('.colors');
+    lists.forEach((list) => {
+      const className = list.getAttribute('class').replace('colors ', '');
+      for (let index = 0; index <= 8; index++) {
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        li.append(span);
+        li.append(`${100 * (index + 1)}`);
+        span.style.backgroundColor = `var(--${className}${100 * (index + 1)}, rgba(0,0,0,0.05))`;
+        list.append(li);
+      }
+    })
+  </script>
+</body>
+
+</html>

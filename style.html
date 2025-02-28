@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 가이드</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/guide.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>스타일 가이드</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/guide.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    <aside class="sidebar">
-      <h2>Components</h2>
-      <nav>
-        <ul>
-          <li><a href="./guide/colors.html" class="active" target="frame">Colors</a></li>
-          <li><a href="./guide/align.html" target="frame">Align</a></li>
-          <li><a href="" target="frame">Accordion</a></li>
-          <li><a href="" target="frame">Avatar</a></li>
-          <li><a href="" target="frame">Badge</a></li>
-          <li><a href="" target="frame">Banner</a></li>
-          <li><a href="" target="frame">Breadcrumb</a></li>
-          <li><a href="" target="frame">Buttons</a></li>
-          <li><a href="" target="frame">Button Group</a></li>
-          <li><a href="" target="frame">Card</a></li>
-          <li><a href="" target="frame">Carousel</a></li>
-          <li><a href="" target="frame">Datepicker</a></li>
-          <li><a href="" target="frame">Footer</a></li>
-          <li><a href="" target="frame">Gallery</a></li>
-          <li><a href="" target="frame">Indicators</a></li>
-          <li><a href="" target="frame">Modal</a></li>
-          <li><a href="" target="frame">Pagination</a></li>
-          <li><a href="" target="frame">Rating</a></li>
-          <li><a href="" target="frame">Sidebar</a></li>
-          <li><a href="" target="frame">Tables</a></li>
-          <li><a href="" target="frame">Tabs</a></li>
-          <li><a href="" target="frame">Toast</a></li>
-          <li><a href="" target="frame">Typography</a></li>
-          <li><a href="./guide/forms.html" target="frame">Forms</a></li>
-          <li><a href="./guide/typography.html" target="frame">Typography</a></li>
-        </ul>
-      </nav>
-    </aside>
-    <main>
-      <iframe src="./guide/colors.html" frameborder="0" name="frame"></iframe>
-    </main>
-  </div>
-  <script>
-    const links = document.querySelectorAll('.sidebar a');
-    const frame = document.querySelector('iframe');
-    links.forEach((link) => {
-      link.getAttribute('href') === '' && link.parentElement.remove(); // 메뉴 비어있을때 삭제
-      link.addEventListener('click', (e) => {
-        if (e.target.getAttribute('href') === '') {
-          e.preventDefault();
-          alert('현재 파일이 존재하지 않습니다.');
-        } else {
-          links.forEach((a) => (a.classList.remove('active')));
-          e.target.classList.add('active');
-        }
-      })
-    });
-    frame.onload = () => {
-      const style = frame.contentWindow.document.createElement('style');
-      style.textContent = /* css */ `
+  <body>
+    <div class="wrapper">
+      <aside class="sidebar">
+        <h2>Components</h2>
+        <nav>
+          <ul>
+            <li><a href="./guide/colors.html" class="active" target="frame">Colors</a></li>
+            <li><a href="./guide/align.html" target="frame">Align</a></li>
+            <li><a href="" target="frame">Accordion</a></li>
+            <li><a href="" target="frame">Avatar</a></li>
+            <li><a href="" target="frame">Badge</a></li>
+            <li><a href="" target="frame">Banner</a></li>
+            <li><a href="" target="frame">Breadcrumb</a></li>
+            <li><a href="" target="frame">Buttons</a></li>
+            <li><a href="" target="frame">Button Group</a></li>
+            <li><a href="" target="frame">Card</a></li>
+            <li><a href="" target="frame">Carousel</a></li>
+            <li><a href="" target="frame">Datepicker</a></li>
+            <li><a href="" target="frame">Footer</a></li>
+            <li><a href="" target="frame">Gallery</a></li>
+            <li><a href="" target="frame">Indicators</a></li>
+            <li><a href="" target="frame">Modal</a></li>
+            <li><a href="" target="frame">Pagination</a></li>
+            <li><a href="" target="frame">Rating</a></li>
+            <li><a href="" target="frame">Sidebar</a></li>
+            <li><a href="" target="frame">Tables</a></li>
+            <li><a href="" target="frame">Tabs</a></li>
+            <li><a href="" target="frame">Toast</a></li>
+            <li><a href="" target="frame">Typography</a></li>
+            <li><a href="./guide/forms.html" target="frame">Forms</a></li>
+            <li><a href="./guide/typography.html" target="frame">Typography</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <iframe src="./guide/colors.html" frameborder="0" name="frame"></iframe>
+      </main>
+    </div>
+    <script>
+      const links = document.querySelectorAll(".sidebar a");
+      const frame = document.querySelector("iframe");
+      links.forEach((link) => {
+        link.getAttribute("href") === "" && link.parentElement.remove(); // 메뉴 비어있을때 삭제
+        link.addEventListener("click", (e) => {
+          if (e.target.getAttribute("href") === "") {
+            e.preventDefault();
+            alert("현재 파일이 존재하지 않습니다.");
+          } else {
+            links.forEach((a) => a.classList.remove("active"));
+            e.target.classList.add("active");
+          }
+        });
+      });
+      frame.onload = () => {
+        const style = frame.contentWindow.document.createElement("style");
+        style.textContent = /* css */ `
         body{ 
           padding:20px;
+          @media (width < 1280px) {
+            padding:0 20px 20px;
+          }
           > h2:not([class]) {
             margin-block:40px 20px;
             font-size:20px;
@@ -101,9 +103,8 @@
           }
         }
       `;
-      frame.contentWindow.document.head.append(style);
-    }
-  </script>
-</body>
-
+        frame.contentWindow.document.head.append(style);
+      };
+    </script>
+  </body>
 </html>

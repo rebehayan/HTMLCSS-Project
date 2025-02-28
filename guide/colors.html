@@ -29,9 +29,17 @@
         const li = document.createElement('li');
         const span = document.createElement('span');
         li.append(span);
+
+        // 변수명 적용
         li.append(`${100 * (index + 1)}`);
+
+        // 색 적용
         span.style.backgroundColor = `var(--${className}${100 * (index + 1)}, rgba(0,0,0,0.05))`;
         list.append(li);
+
+        // hex코드 추출
+        const spanColor = getComputedStyle(span).getPropertyValue(`--${className}${100 * (index + 1)}`);
+        span.insertAdjacentHTML('afterend', `<div>${spanColor}</div>`);
       }
     })
   </script>

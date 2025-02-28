@@ -1,0 +1,239 @@
+/* -------------------------------------------------------------------------- */
+/*                                    전역CSS                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+  --baseFontSize: 1.6rem;
+
+  --gray100: #e5e5e5;
+  --gray200: #d1d1d1;
+  --gray300: #9c9c9c;
+  --gray400: #8c8c8c;
+  --gray500: #7c7c7c;
+  --gray600: #6c6c6c;
+  --gray700: #5c5c5c;
+  --gray800: #4c4c4c;
+  --gray900: #3c3c3c;
+
+  --red100: #ffcccc;
+  --red200: #ffb3b3;
+  --red300: #ff9999;
+  --red400: #ff8080;
+  --red500: #cc6666;
+  --red600: #b35959;
+  --red700: #993d3d;
+  --red800: #661414;
+  --red900: #4d0f0f;
+
+  --yellow100: #fffbcc;
+  --yellow200: #fff599;
+  --yellow300: #ffef66;
+  --yellow400: #ffe933;
+  --yellow500: #ccbb26;
+  --yellow600: #b3a321;
+  --yellow700: #998b1c;
+  --yellow800: #665e13;
+  --yellow900: #4d490f;
+
+  --green100: #ccf5cc;
+  --green200: #99eb99;
+  --green300: #66e066;
+  --green400: #33d633;
+  --green500: #29aa29;
+  --green600: #248f24;
+  --green700: #1e741e;
+  --green800: #145014;
+  --green900: #103d10;
+
+  --blue200: #99ebff;
+  --blue100: #ccf5ff;
+  --blue300: #66e0ff;
+  --blue400: #33d6ff;
+  --blue500: #29aacc;
+  --blue600: #248fb3;
+  --blue700: #1e7499;
+  --blue800: #145066;
+  --blue900: #103d4d;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Align                                   */
+/* -------------------------------------------------------------------------- */
+.align {
+  display: flex;
+}
+.align.both {
+  justify-content: space-between;
+}
+.align.right {
+  justify-content: end;
+}
+.align.center {
+  justify-content: center;
+}
+.align.vt {
+  align-items: start;
+}
+.align.vm {
+  align-items: center;
+}
+.align.vb {
+  align-items: end;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Text Color                                 */
+/* -------------------------------------------------------------------------- */
+.text-gray100 {
+  color: var(--gray100);
+}
+.text-gray200 {
+  color: var(--gray200);
+}
+.text-gray300 {
+  color: var(--gray300);
+}
+.text-gray400 {
+  color: var(--gray400);
+}
+.text-gray500 {
+  color: var(--gray500);
+}
+.text-gray600 {
+  color: var(--gray600);
+}
+.text-gray700 {
+  color: var(--gray700);
+}
+.text-gray800 {
+  color: var(--gray800);
+}
+.text-gray900 {
+  color: var(--gray900);
+}
+
+.text-red100 {
+  color: var(--red100);
+}
+.text-red200 {
+  color: var(--red200);
+}
+.text-red300 {
+  color: var(--red300);
+}
+.text-red400 {
+  color: var(--red400);
+}
+.text-red500 {
+  color: var(--red500);
+}
+.text-red600 {
+  color: var(--red600);
+}
+.text-red700 {
+  color: var(--red700);
+}
+.text-red800 {
+  color: var(--red800);
+}
+.text-red900 {
+  color: var(--red900);
+}
+
+.text-yellow100 {
+  color: var(--yellow100);
+}
+.text-yellow200 {
+  color: var(--yellow200);
+}
+.text-yellow300 {
+  color: var(--yellow300);
+}
+.text-yellow400 {
+  color: var(--yellow400);
+}
+.text-yellow500 {
+  color: var(--yellow500);
+}
+.text-yellow600 {
+  color: var(--yellow600);
+}
+.text-yellow700 {
+  color: var(--yellow700);
+}
+.text-yellow800 {
+  color: var(--yellow800);
+}
+.text-yellow900 {
+  color: var(--yellow900);
+}
+
+.text-green100 {
+  color: var(--green100);
+}
+.text-green200 {
+  color: var(--green200);
+}
+.text-green300 {
+  color: var(--green300);
+}
+.text-green400 {
+  color: var(--green400);
+}
+.text-green500 {
+  color: var(--green500);
+}
+.text-green600 {
+  color: var(--green600);
+}
+.text-green700 {
+  color: var(--green700);
+}
+.text-green800 {
+  color: var(--green800);
+}
+.text-green900 {
+  color: var(--green900);
+}
+
+.text-blue100 {
+  color: var(--blue100);
+}
+.text-blue200 {
+  color: var(--blue200);
+}
+.text-blue300 {
+  color: var(--blue300);
+}
+.text-blue400 {
+  color: var(--blue400);
+}
+.text-blue500 {
+  color: var(--blue500);
+}
+.text-blue600 {
+  color: var(--blue600);
+}
+.text-blue700 {
+  color: var(--blue700);
+}
+.text-blue800 {
+  color: var(--blue800);
+}
+.text-blue900 {
+  color: var(--blue900);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Typography                                 */
+/* -------------------------------------------------------------------------- */
+.text-base {
+}

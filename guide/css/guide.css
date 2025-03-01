@@ -1,5 +1,14 @@
 body {
   background-color: #f1f1f1;
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 1000px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
 }
 .wrapper {
   display: grid;
@@ -15,14 +24,30 @@ body {
 }
 
 .sidebar {
-  width: 20rem;
+  width: 25rem;
   height: 100vh;
   overflow: auto;
+  padding: 2rem;
   border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      border-radius: 1000px;
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+  }
   @media (width < 1280px) {
-    height: 100px;
+    height: auto;
     width: 100vw;
-    padding: 20px;
+    padding: 1rem;
     box-sizing: border-box;
     overflow: visible;
     background-color: #fff;
@@ -31,6 +56,7 @@ body {
     nav {
       width: 100%;
       overflow: auto;
+      scroll-behavior: smooth;
       &::-webkit-scrollbar {
         height: 10px;
         background-color: transparent;
@@ -55,6 +81,16 @@ body {
   h2 {
     font-size: 2rem;
     padding: 1rem;
+    @media (width < 1280px) {
+      padding: 0;
+    }
+    ~ h2 {
+      margin-top: 2.5rem;
+      @media (width < 1280px) {
+        margin-top: 1.5rem;
+        padding: 0;
+      }
+    }
   }
   a {
     display: block;
@@ -63,9 +99,19 @@ body {
     color: #999;
     white-space: nowrap;
     line-height: 1;
+    @media (width<1280px) {
+      padding-inline: 0;
+    }
     &.active {
       font-weight: 700;
       color: slateblue;
+    }
+    &[data-kor] {
+      &::after {
+        content: "(" attr(data-kor) ")";
+        font-size: 1.6rem;
+        margin-left: 0.5rem;
+      }
     }
   }
   details {
@@ -87,6 +133,6 @@ iframe {
   border: none;
 
   @media (width < 1280px) {
-    height: calc(100vh - 103px);
+    height: calc(100vh - var(--height));
   }
 }

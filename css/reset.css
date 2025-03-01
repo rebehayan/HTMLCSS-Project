@@ -1,153 +1,125 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 /* Reset */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-p,
-blockquote,
-pre,
-code,
-address,
-ul,
-ol,
-li,
-nav,
-section,
-article,
-header,
-footer,
-main,
-aside,
-dl,
-dt,
-dd,
-table,
-thead,
-tbody,
-tfoot,
-label,
-caption,
-th,
-td,
-form,
-fieldset,
-legend,
-hr,
-input,
-button,
-textarea,
-object,
-figure,
-figcaption {
+:where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div,
+    p,
+    blockquote,
+    pre,
+    code,
+    address,
+    ul,
+    ol,
+    li,
+    nav,
+    section,
+    article,
+    header,
+    footer,
+    main,
+    aside,
+    dl,
+    dt,
+    dd,
+    table,
+    thead,
+    tbody,
+    tfoot,
+    label,
+    caption,
+    th,
+    td,
+    form,
+    fieldset,
+    legend,
+    hr,
+    input,
+    button,
+    textarea,
+    object,
+    figure,
+    figcaption
+  ) {
   margin: 0;
   padding: 0;
   /* font-family: "Noto Sans KR", sans-serif; */
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-size: var(--baseFontSize);
 }
 
-body,
-input,
-select,
-textarea,
-button,
-img,
-fieldset {
+:where(body, input, select, textarea, button, img, fieldset) {
   border: none;
 }
 
-ul,
-ol,
-li {
+:where(ul, ol, li) {
   list-style: none;
 }
 
-table {
+:where(table) {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-address,
-cite,
-code,
-em,
-i {
+:where(address, cite, code, em, i) {
   font-style: normal;
   font-weight: normal;
 }
-
-label,
-img,
-input,
-select,
-textarea,
-button,
-a {
+:where(label, img, input, select, textarea, button, a) {
   vertical-align: middle;
 }
 
-u,
-ins,
-a {
+:where(u, ins, a) {
   text-decoration: none;
 }
 
-button {
+:where(button) {
   cursor: pointer;
 }
 
-a {
+:where(a) {
   color: inherit;
 }
 
 /* Normalize */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+:where(input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button) {
   -webkit-appearance: none;
 }
 
-input[type="number"] {
+:where(input[type="number"]) {
   -moz-appearance: textfield;
 }
 
-input[type="number"],
-input[type="text"],
-input[type="password"],
-input[type="url"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-textarea {
+:where(input[type="number"], input[type="text"], input[type="password"], input[type="url"], input[type="email"], input[type="tel"], input[type="date"], textarea) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
 }
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+:where(
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration
+  ) {
   -webkit-appearance: none;
 }
 
-input[type="date"] {
+:where(input[type="date"]) {
   position: relative;
 }
-
-input[type="date"]::-webkit-clear-button,
-input[type="date"]::-webkit-inner-spin-button {
+:where(input[type="date"]::-webkit-clear-button, input[type="date"]::-webkit-inner-spin-button) {
   display: none;
 }
-
-input[type="date"]::-webkit-calendar-picker-indicator {
+:where(input[type="date"]::-webkit-calendar-picker-indicator) {
   position: absolute;
   left: 0;
   top: 0;
@@ -158,32 +130,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 100%;
 }
 
-input[type="date"] {
-  position: relative;
-  width: 100px;
-}
-
-input[type="date"]::before {
+:where(input[type="date"]::before) {
   content: attr(data-placeholder);
   width: 100%;
 }
 
-input[type="date"]:valid::before {
+:where(input[type="date"]:valid::before) {
   display: none;
 }
 
-select {
+:where(select) {
   appearance: none;
 }
 
-html {
+:where(html) {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
   -webkit-text-size-adjust: none;
 }
 
-body {
+:where(body) {
   padding: 0;
   margin: 0;
   font-size: 1rem;

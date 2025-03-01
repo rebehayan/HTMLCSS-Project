@@ -49,6 +49,12 @@
     <script>
       const links = document.querySelectorAll(".sidebar a");
       const frame = document.querySelector("iframe");
+      const frameSrc = sessionStorage.getItem("src");
+
+      if (frameSrc) {
+        frame.setAttribute("src", frameSrc);
+      }
+
       links.forEach((link) => {
         link.getAttribute("href") === "" && link.parentElement.remove(); // 메뉴 비어있을때 삭제
         link.addEventListener("click", (e) => {
@@ -58,6 +64,7 @@
           } else {
             links.forEach((a) => a.classList.remove("active"));
             e.target.classList.add("active");
+            sessionStorage.setItem("src", e.target.getAttribute("href"));
           }
         });
       });

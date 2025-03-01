@@ -62,6 +62,7 @@ body {
     font-size: 1.8rem;
     color: #999;
     white-space: nowrap;
+    line-height: 1;
     &.active {
       font-weight: 700;
       color: slateblue;

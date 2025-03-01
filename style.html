@@ -66,6 +66,15 @@
         style.textContent = /* css */ `
         body{ 
           padding:20px;
+          &::-webkit-scrollbar {
+            width: 10px;
+            background-color: transparent;
+          }
+          &::-webkit-scrollbar-thumb {
+            width: 10px;
+            border-radius: 1000px;
+            background-color: rgba(0, 0, 0, 0.08);
+          }
           @media (width < 1280px) {
             padding:0 20px 20px;
           }

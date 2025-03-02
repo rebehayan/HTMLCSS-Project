@@ -10,15 +10,14 @@ export const frame = () => {
     const style = frame.contentWindow.document.createElement("style");
     style.textContent = /* css */ `
       body{ 
-        padding:20px;
         &::-webkit-scrollbar {
           width: 10px;
-          background-color: transparent;
+          background-color: rgba(0, 0, 0, 0.02);
         }
         &::-webkit-scrollbar-thumb {
           width: 10px;
           border-radius: 1000px;
-          background-color: rgba(0, 0, 0, 0.08);
+          background-color: rgba(0, 0, 0, 0.05);
         }
         @media (width < 1280px) {
           padding:0 20px 20px;
@@ -30,7 +29,7 @@ export const frame = () => {
       }
       .colors {
         display:grid;
-        grid-template-columns:repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns:repeat(auto-fill, minmax(95px, 1fr));
         gap:10px;
         li {
           display:grid;

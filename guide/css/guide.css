@@ -106,13 +106,13 @@ body {
       font-weight: 700;
       color: slateblue;
     }
-    &[data-kor] {
+    /* &[data-kor] {
       &::after {
         content: "(" attr(data-kor) ")";
         font-size: 1.6rem;
         margin-left: 0.5rem;
       }
-    }
+    } */
   }
   details {
     &[open] {
@@ -127,8 +127,9 @@ body {
 }
 
 iframe {
-  width: 100%;
-  height: calc(100vh - 3px);
+  margin: 2rem;
+  width: calc(100% - 4rem);
+  height: calc(100vh - 4.3rem);
   box-sizing: border-box;
   border: none;
 

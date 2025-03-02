@@ -11,65 +11,87 @@
 
 <body>
   <div class="wrapper">
-    <aside class="sidebar">
-      <h2>Atoms (원자)</h2>
-      <nav>
-        <ul>
-          <li><a href="./guide/colors.html" class="active" target="frame">Colors</a></li>
-          <li><a href="./guide/align.html" target="frame">Align</a></li>
-          <li><a href="./guide/typography.html" target="frame">Typography</a></li>
-          <li><a href="" target="frame">Badge</a></li>
-          <li><a href="" target="frame">Buttons</a></li>
-          <li><a href="" target="frame">Rating</a></li>
-          <li><a href="" target="frame">Toast</a></li>
-          <li><a href="" target="frame">Icons</a></li>
-          <li><a href="" target="frame">Spacing</a></li>
-          <li><a href="" target="frame">Shadows</a></li>
-        </ul>
-      </nav>
-      <h2>Molecules (분자)</h2>
-      <nav>
-        <ul>
-          <li>
-          <li><a href="" target="frame">Avatar</a></li>
-          <li><a href="" target="frame">Button Group</a></li>
-          <li><a href="" target="frame">Breadcrumb</a></li>
-          <li><a href="./guide/forms.html" target="frame">Forms</a></li>
-          <li><a href="" target="frame">Pagination</a></li>
-          <li><a href="" target="frame">Tabs</a></li>
-          <li><a href="" target="frame">Switch</a></li>
-          <li><a href="" target="frame">Tag</a></li>
-        </ul>
-      </nav>
-      <h2>Organisms (유기체)</h2>
-      <nav>
-        <ul>
-          <li><a href="" target="frame">Accordion</a></li>
-          <li><a href="" target="frame">Banner</a></li>
-          <li><a href="" target="frame">Card</a></li>
-          <li><a href="" target="frame">Carousel</a></li>
-          <li><a href="" target="frame">Datepicker</a></li>
-          <li><a href="" target="frame">Footer</a></li>
-          <li><a href="" target="frame">Gallery</a></li>
-          <li><a href="" target="frame">Header</a></li>
-          <li><a href="" target="frame">Footer</a></li>
-          <li><a href="" target="frame">Hero Section</a></li>
-          <li><a href="" target="frame">Search</a></li>
-          <li><a href="" target="frame">Filter</a></li>
-          <li><a href="" target="frame">Indicators</a></li>
-          <li><a href="" target="frame">Modal</a></li>
-          <li><a href="" target="frame">Sidebar</a></li>
-          <li><a href="./guide/tables.html" target="frame">Tables</a></li>
-        </ul>
-      </nav>
-      <h2>Template (템플릿)</h2>
-      <nav>
-        <ul>
-          <li><a href="" target="frame">Form Layout</a></li>
-          <li><a href="" target="frame">Product</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <div>
+      <aside class="sidebar" popover id="sidebar">
+        <h1><img src="./guide/images/logo.png" alt=""><span>Rebehayan</span><span>Deep-Dive</span></h1>
+        <div class="toggle">
+          <button popovertarget="sidebar" aria-label="메뉴열기">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+              <g fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2">
+                <path stroke-linecap="round" d="M8 10.5H40" />
+                <path stroke-linecap="round" d="M24 19.5H40" />
+                <path stroke-linecap="round" d="M24 28.5H40" />
+                <path stroke-linecap="round" d="M8 37.5H40" />
+                <path fill="#2F88FF" d="M16 19L8 24L16 29V19Z" />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <details name="gnb" open>
+            <summary>Atoms (원자)</summary>
+            <!-- 기본적인 속성 → UI 요소 → 기능성 컴포넌트 -->
+            <ul>
+              <li><a href="./guide/colors.html" class="active" target="frame">Colors</a></li>
+              <li><a href="./guide/typography.html" target="frame">Typography</a></li>
+              <li><a href="./guide/align.html" target="frame">Align</a></li>
+              <li><a href="" target="frame">Spacing</a></li>
+              <li><a href="" target="frame">Shadows</a></li>
+              <li><a href="" target="frame">Icons</a></li>
+              <li><a href="" target="frame">Badge</a></li>
+              <li><a href="" target="frame">Buttons</a></li>
+              <li><a href="" target="frame">Rating</a></li>
+              <li><a href="" target="frame">Toast</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Molecules (분자)</summary>
+            <!-- 기본 UI → 내비게이션 → 폼 → 인터랙션 요소 -->
+            <ul>
+              <li><a href="" target="frame">Avatar</a></li>
+              <li><a href="" target="frame">Button Group</a></li>
+              <li><a href="" target="frame">Breadcrumb</a></li>
+              <li><a href="" target="frame">Pagination</a></li>
+              <li><a href="" target="frame">Tabs</a></li>
+              <li><a href="./guide/forms.html" target="frame">Forms</a></li>
+              <li><a href="" target="frame">Switch</a></li>
+              <li><a href="" target="frame">Tag</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Organisms (유기체)</summary>
+            <!-- 레이아웃 → 콘텐츠 → 입력/필터링 → 인터랙션 -->
+            <ul>
+              <li><a href="" target="frame">Header</a></li>
+              <li><a href="" target="frame">Hero Section</a></li>
+              <li><a href="" target="frame">Banner</a></li>
+              <li><a href="" target="frame">Footer</a></li>
+              <li><a href="" target="frame">Sidebar</a></li>
+
+              <li><a href="" target="frame">Card</a></li>
+              <li><a href="" target="frame">Gallery</a></li>
+              <li><a href="" target="frame">Carousel</a></li>
+              <li><a href="./guide/tables.html" target="frame">Tables</a></li>
+
+              <li><a href="" target="frame">Search</a></li>
+              <li><a href="" target="frame">Filter</a></li>
+
+              <li><a href="" target="frame">Datepicker</a></li>
+              <li><a href="" target="frame">Accordion</a></li>
+              <li><a href="" target="frame">Modal</a></li>
+              <li><a href="" target="frame">Indicators</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Template (템플릿)</summary>
+            <ul>
+              <li><a href="" target="frame">Form Layout</a></li>
+              <li><a href="" target="frame">Product</a></li>
+            </ul>
+          </details>
+        </nav>
+      </aside>
+    </div>
     <main>
       <iframe src="./guide/colors.html" frameborder="0" name="frame"></iframe>
     </main>

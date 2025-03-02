@@ -1,32 +1,62 @@
 import { removeClass } from "./helper.js";
 
+const mobileSize = 1280;
+
 export const navigation = () => {
   const sidebar = document.querySelector(".sidebar");
   const links = sidebar.querySelectorAll("a");
-  const frame = document.querySelector("iframe");
+  const current = sessionStorage.getItem("src");
+  const details = sidebar.querySelectorAll("details");
+
+  // popover 열림
+  sidebar.showPopover();
 
   links.forEach((link) => {
-    link.getAttribute("href") === "" && link.parentElement.remove(); // 메뉴 비어있을때 삭제
+    // 빈메뉴 삭제
+    if (!link.getAttribute("href")) {
+      link.parentElement.remove();
+      return;
+    }
+
     link.addEventListener("click", (e) => {
-      // if (e.target.getAttribute("href") === "") {
-      //   e.preventDefault();
-      //   alert("현재 파일이 존재하지 않습니다.");
-      // } else {
+      if (window.innerWidth < mobileSize) {
+        sidebar.hidePopover();
+      }
+
       removeClass(links);
       e.target.classList.add("active");
       sessionStorage.setItem("src", e.target.getAttribute("href"));
-      // }
     });
   });
 
+  // 반응형 사이드바
   const resizeSidebar = () => {
-    const width = window.innerWidth;
-    if (width < 1280) {
-      const height = sidebar.offsetHeight;
-      frame.style.setProperty("--height", `${height + 3}px`);
+    if (window.innerWidth < mobileSize) {
+      sidebar.hidePopover();
+    } else {
+      sidebar.showPopover();
     }
   };
 
+  // 현재 위치활성화
+  const currentDetails = () => {
+    if (!current) return;
+
+    links.forEach((link) => {
+      const linkText = link.textContent.toLocaleLowerCase();
+
+      if (current.includes(linkText)) {
+        details.forEach((detail) => detail.removeAttribute("open"));
+
+        const parentDetail = link.closest("details");
+        if (parentDetail) {
+          parentDetail.setAttribute("open", true);
+        }
+      }
+    });
+  };
+
+  currentDetails();
   resizeSidebar();
   window.addEventListener("resize", resizeSidebar);
 };

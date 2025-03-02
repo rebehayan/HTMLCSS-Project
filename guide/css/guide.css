@@ -153,7 +153,7 @@ main {
 iframe {
   margin: 2rem;
   width: calc(100% - 6rem);
-  height: calc(100vh - 10.3rem);
+  height: calc(100vh - 8.3rem);
   box-sizing: border-box;
   border: none;
 }

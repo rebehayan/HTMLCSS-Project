@@ -4,6 +4,7 @@ export const frame = () => {
   const links = document.querySelectorAll(".sidebar a");
   const frame = document.querySelector("iframe");
   const frameSrc = sessionStorage.getItem("src");
+  if (!frame) return;
 
   // 프레임CSS
   const frameCSS = () => {

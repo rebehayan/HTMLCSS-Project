@@ -52,6 +52,8 @@ h1 {
 }
 
 .sidebar {
+  interpolate-size: allow-keywords;
+
   display: block;
   position: fixed;
   inset: auto;
@@ -87,7 +89,16 @@ h1 {
     padding-left: 1rem;
   }
   details {
+    &::details-content {
+      overflow: hidden;
+      block-size: 0;
+      transition: block-size 0.5s, content-visibility 0.5s;
+      transition-behavior: allow-discrete;
+    }
     &[open] {
+      &::details-content {
+        block-size: auto;
+      }
       summary {
         background-color: var(--summaryActiveColor);
         color: #fff;

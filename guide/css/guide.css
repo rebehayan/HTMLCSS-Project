@@ -67,23 +67,24 @@ h1 {
   border: none;
   overflow: visible;
 
-  &::-webkit-scrollbar {
-    width: 5px;
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
-  &:hover {
-    &::-webkit-scrollbar-thumb {
-      width: 5px;
-      border-radius: 1000px;
-      background-color: rgba(0, 0, 0, 0.08);
-    }
-  }
   nav {
     padding: 0 0.5rem 2rem 0;
     overflow: auto;
+    height: calc(100vh - 12rem);
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        width: 5px;
+        border-radius: 1000px;
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
   }
   ul {
     padding-left: 1rem;
@@ -114,6 +115,8 @@ h1 {
     }
   }
   summary {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

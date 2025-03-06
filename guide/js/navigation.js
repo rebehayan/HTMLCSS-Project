@@ -7,9 +7,10 @@ export const navigation = () => {
   const links = sidebar.querySelectorAll("a");
   const current = sessionStorage.getItem("src");
   const details = sidebar.querySelectorAll("details");
+  const toggle = document.querySelector(".toggle");
 
   // popover 열림
-  sidebar.showPopover();
+  sidebar.show();
 
   links.forEach((link) => {
     // 빈메뉴 삭제
@@ -20,21 +21,28 @@ export const navigation = () => {
 
     link.addEventListener("click", (e) => {
       if (window.innerWidth < mobileSize) {
-        sidebar.hidePopover();
+        sidebar.close();
       }
-
       removeClass(links);
       e.target.classList.add("active");
       sessionStorage.setItem("src", e.target.getAttribute("href"));
     });
   });
 
+  toggle.addEventListener("click", () => {
+    if (sidebar.hasAttribute("open")) {
+      sidebar.close();
+    } else {
+      sidebar.show();
+    }
+  });
+
   // 반응형 사이드바
   const resizeSidebar = () => {
     if (window.innerWidth < mobileSize) {
-      sidebar.hidePopover();
+      sidebar.close();
     } else {
-      sidebar.showPopover();
+      sidebar.show();
     }
   };
 

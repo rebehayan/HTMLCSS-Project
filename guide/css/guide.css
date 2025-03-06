@@ -161,55 +161,88 @@ h1 {
 }
 
 main {
-  margin: 2rem;
+  margin: 6rem 2rem 2rem;
   background-color: #fff;
+  position: relative;
+  text-align: center;
 }
 iframe {
   margin: 2rem;
-  width: calc(100% - 6rem);
-  height: calc(100vh - 8.3rem);
+  width: calc(100% - 4rem);
+  height: calc(100vh - 12.3rem);
   box-sizing: border-box;
   border: none;
+  transition: width 0.4s;
 }
 
-.toggle {
+.header {
   position: absolute;
-  top: 2.5rem;
-  z-index: 100;
+  inset: -6rem 0 auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr min-content min-content;
+  align-items: center;
+  gap: 1rem;
+}
+.toggle {
+  justify-self: start;
   transition: 0.4s;
   background-color: #fff;
   svg {
     width: 3.5rem;
   }
-  button {
-    background-color: #fff;
+}
+.blank {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  line-height: 1;
+  gap: 0.5rem;
+  &::after {
+    content: "";
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 32 32"><path fill="%23000" d="M28 4H10a2.006 2.006 0 0 0-2 2v14a2.006 2.006 0 0 0 2 2h18a2.006 2.006 0 0 0 2-2V6a2.006 2.006 0 0 0-2-2Zm0 16H10V6h18Z"/><path fill="%23000" d="M18 26H4V16h2v-2H4a2.006 2.006 0 0 0-2 2v10a2.006 2.006 0 0 0 2 2h14a2.006 2.006 0 0 0 2-2v-2h-2Z"/></svg>')
+      no-repeat center / contain;
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+}
+.btn-mobile {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  line-height: 1;
+  gap: 0.5rem;
+  &::after {
+    content: "";
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="22" x="4" y="1" rx="3"/><path d="M10 19h4"/></g></svg>')
+      no-repeat center / contain;
+    width: 2rem;
+    aspect-ratio: 1;
   }
 }
 
 /* -------------------------------------------------------------------------- */
 /*                               Sidebar Active                               */
 /* -------------------------------------------------------------------------- */
-
 body {
   /* Off */
-  &:has(:not(:popover-open)) {
+  &:has(:not(dialog[open])) {
     .sidebar {
       left: calc(var(--sideWidth) * -1);
     }
     .toggle {
-      left: var(--sideWidth);
-      translate: 0 0;
       rotate: y 180deg;
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
 
   /* On */
-  &:has(:popover-open) {
+  &:has(dialog[open]) {
     .sidebar {
       left: 0;
-      &::backdrop {
-        @media (width < 1280px) {
+      @media (width < 1280px) {
+        &::backdrop {
           background-color: rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(2px);
         }
@@ -222,10 +255,10 @@ body {
       }
     }
     .toggle {
-      left: var(--sideWidth);
-      translate: calc(-100% - 1rem) 0;
       rotate: y 0deg;
-      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+      @media (width<1280px) {
+        translate: var(--sideWidth) 0;
+      }
     }
   }
 }

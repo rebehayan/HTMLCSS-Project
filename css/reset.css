@@ -1,5 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"); */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 /* Reset */
 :where(h1, h2, h3, h4, h5, h6, div, p, blockquote, pre, code, address, ul, ol, li, nav, section, article, header, footer, main, aside, dl, dt, dd, table, thead, tbody, tfoot, label, caption, th, td, form, fieldset, legend, hr, input, button, textarea, object, figure, figcaption, span, em, strong, i, b, u, ins) {
   margin: 0;
@@ -34,7 +35,7 @@
 }
 
 :where(button) {
-  all: unset;
+  background-color: unset;
 }
 
 :where(a) {
@@ -129,26 +130,4 @@ legend,
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-@media print {
-  .header,
-  .footer,
-  .visual {
-    display: none;
-  }
-  .page-break {
-    page-break-before: always;
-  }
-}
-@page {
-  margin: 1cm 2cm;
-}
-.print {
-  display: block;
-}
-@media screen {
-  .print {
-    display: none;
-  }
 }

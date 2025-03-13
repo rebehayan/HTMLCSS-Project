@@ -1,1 +1,7 @@
+/* 기초정의 */
+@import url(./reset.css);
+@import url(./print.css);
+@import url(./debug.css);
+
+/* 디자인정의 */
 @import url(./atomic.css);

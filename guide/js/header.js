@@ -1,9 +1,18 @@
 const mobileSize = 1280;
 const frame = document.querySelector("iframe");
 const button = document.querySelector(".btn-mobile");
+const linkTag = document.querySelector(".blank");
+const gnb = document.querySelector("#gnb");
+const links = gnb.querySelectorAll("a");
+
+const initNewTab = () => {
+  const initHref = links[0].getAttribute("href");
+  console.log(initHref);
+
+  linkTag.setAttribute("href", initHref);
+};
 
 const newTab = (link) => {
-  const linkTag = document.querySelector(".blank");
   linkTag.setAttribute("href", link);
 };
 
@@ -38,8 +47,7 @@ window.addEventListener("resize", resizeButton);
 window.addEventListener("load", resizeButton);
 
 export const header = () => {
-  const gnb = document.querySelector("#gnb");
-  const links = gnb.querySelectorAll("a");
+  initNewTab();
 
   links.forEach((link) => {
     link.addEventListener("click", () => {

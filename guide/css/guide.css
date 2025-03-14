@@ -104,8 +104,7 @@ h1 {
         background-color: var(--summaryActiveColor);
         color: #fff;
         &::after {
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="white"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>')
-            no-repeat center / contain;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="white"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>') no-repeat center / contain;
           rotate: 90deg;
         }
       }
@@ -130,8 +129,7 @@ h1 {
     cursor: pointer;
     &::after {
       content: "";
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="gray"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>')
-        no-repeat center / contain;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="gray"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>') no-repeat center / contain;
       width: 1.4rem;
       aspect-ratio: 1;
       transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -216,8 +214,7 @@ iframe {
   gap: 0.5rem;
   &::after {
     content: "";
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="22" x="4" y="1" rx="3"/><path d="M10 19h4"/></g></svg>')
-      no-repeat center / contain;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="22" x="4" y="1" rx="3"/><path d="M10 19h4"/></g></svg>') no-repeat center / contain;
     width: 2rem;
     aspect-ratio: 1;
   }
@@ -242,6 +239,7 @@ body {
     .sidebar {
       left: 0;
       @media (width < 1280px) {
+        z-index: 100;
         &::backdrop {
           background-color: rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(2px);

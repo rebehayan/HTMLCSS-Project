@@ -95,142 +95,16 @@
 /* -------------------------------------------------------------------------- */
 /*                                 Text Color                                 */
 /* -------------------------------------------------------------------------- */
-.text-gray100 {
-  color: var(--gray100);
-}
-.text-gray200 {
-  color: var(--gray200);
-}
-.text-gray300 {
-  color: var(--gray300);
-}
-.text-gray400 {
-  color: var(--gray400);
-}
-.text-gray500 {
-  color: var(--gray500);
-}
-.text-gray600 {
-  color: var(--gray600);
-}
-.text-gray700 {
-  color: var(--gray700);
-}
-.text-gray800 {
-  color: var(--gray800);
-}
-.text-gray900 {
-  color: var(--gray900);
-}
 
-.text-red100 {
-  color: var(--red100);
+.text-primary {
+  color: var(--primary, #000);
 }
-.text-red200 {
-  color: var(--red200);
+.text-secondary {
+  color: var(--primary, #000);
 }
-.text-red300 {
-  color: var(--red300);
+.text-danger {
+  color: var(--primary, #000);
 }
-.text-red400 {
-  color: var(--red400);
-}
-.text-red500 {
-  color: var(--red500);
-}
-.text-red600 {
-  color: var(--red600);
-}
-.text-red700 {
-  color: var(--red700);
-}
-.text-red800 {
-  color: var(--red800);
-}
-.text-red900 {
-  color: var(--red900);
-}
-
-.text-yellow100 {
-  color: var(--yellow100);
-}
-.text-yellow200 {
-  color: var(--yellow200);
-}
-.text-yellow300 {
-  color: var(--yellow300);
-}
-.text-yellow400 {
-  color: var(--yellow400);
-}
-.text-yellow500 {
-  color: var(--yellow500);
-}
-.text-yellow600 {
-  color: var(--yellow600);
-}
-.text-yellow700 {
-  color: var(--yellow700);
-}
-.text-yellow800 {
-  color: var(--yellow800);
-}
-.text-yellow900 {
-  color: var(--yellow900);
-}
-
-.text-green100 {
-  color: var(--green100);
-}
-.text-green200 {
-  color: var(--green200);
-}
-.text-green300 {
-  color: var(--green300);
-}
-.text-green400 {
-  color: var(--green400);
-}
-.text-green500 {
-  color: var(--green500);
-}
-.text-green600 {
-  color: var(--green600);
-}
-.text-green700 {
-  color: var(--green700);
-}
-.text-green800 {
-  color: var(--green800);
-}
-.text-green900 {
-  color: var(--green900);
-}
-
-.text-blue100 {
-  color: var(--blue100);
-}
-.text-blue200 {
-  color: var(--blue200);
-}
-.text-blue300 {
-  color: var(--blue300);
-}
-.text-blue400 {
-  color: var(--blue400);
-}
-.text-blue500 {
-  color: var(--blue500);
-}
-.text-blue600 {
-  color: var(--blue600);
-}
-.text-blue700 {
-  color: var(--blue700);
-}
-.text-blue800 {
-  color: var(--blue800);
-}
-.text-blue900 {
-  color: var(--blue900);
+.text-success {
+  color: var(--primary, #000);
 }

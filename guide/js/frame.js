@@ -28,26 +28,6 @@ export const frame = () => {
           font-size:20px;
         }
       }
-      .colors {
-        display:grid;
-        grid-template-columns:repeat(auto-fit, minmax(95px, 1fr));
-        gap:10px;
-        li {
-          display:grid;
-          gap:5px;
-          font-size:16px;
-          color:#111827;
-        }
-        div {
-          font-size:14px;
-          color:#7c7c7c;
-        }
-        span {
-          width:100%;
-          aspect-ratio:16/9;
-          border-radius:5px;
-        }
-      }
       .guide-block {
         border:1px dashed #7c7c7c;
         padding:10px;

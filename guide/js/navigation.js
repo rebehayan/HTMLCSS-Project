@@ -9,7 +9,7 @@ export const navigation = () => {
   const details = sidebar.querySelectorAll("details");
   const toggle = document.querySelector(".toggle");
 
-  // popover 열림
+  // dialog 열림
   sidebar.show();
 
   links.forEach((link) => {

@@ -7,7 +7,6 @@ const links = gnb.querySelectorAll("a");
 
 const initNewTab = () => {
   const initHref = links[0].getAttribute("href");
-  console.log(initHref);
 
   linkTag.setAttribute("href", initHref);
 };

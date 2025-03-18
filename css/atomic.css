@@ -56,6 +56,26 @@
   --blue300: #7ca6f3;
   --blue200: #a7c4f7;
   --blue100: #d3e1fb;
+
+  --primary: var(--blue600);
+  --secondary: var(--gray600);
+  --danger: var(--red600);
+  --success: var(--green600);
+
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-base: 1.6rem;
+  --font-md: 1.8rem;
+  --font-lg: 2rem;
+  --font-xl: 2.2rem;
+
+  --lh-sm: 1.2;
+  --lh-base: 1.5;
+  --lh-md: 1.8;
+
+  --ls-sm: -0.02rem;
+  --ls-base: 0;
+  --ls-md: 0.01rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -95,16 +115,47 @@
 /* -------------------------------------------------------------------------- */
 /*                                 Text Color                                 */
 /* -------------------------------------------------------------------------- */
-
 .text-primary {
   color: var(--primary, #000);
 }
 .text-secondary {
-  color: var(--primary, #000);
+  color: var(--secondary, #000);
 }
 .text-danger {
-  color: var(--primary, #000);
+  color: var(--danger, #000);
 }
 .text-success {
-  color: var(--primary, #000);
+  color: var(--success, #000);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Text Type                                 */
+/* -------------------------------------------------------------------------- */
+.text-sm {
+  color: var(--color, var(--gray600));
+  font-size: var(--fs, var(--font-sm));
+  line-height: var(--lh, var(--lh-sm));
+  letter-spacing: var(--ls, var(--ls-sm));
+  font-weight: var(--fw, 400);
+}
+.text-base {
+  color: var(--color, var(--gray600));
+  font-size: var(--fs, var(--font-base));
+  line-height: var(--lh, var(--lh-base));
+  letter-spacing: var(--ls, var(--ls-base));
+  font-weight: var(--fw, 400);
+}
+.text-md {
+  color: var(--color, var(--gray600));
+  font-size: var(--fs, var(--font-md));
+  line-height: var(--lh, var(--lh-md));
+  letter-spacing: var(--ls, var(--ls-md));
+  font-weight: var(--fw, 400);
+}
+
+strong,
+b {
+  &[class*='text-'] {
+    font-weight: var(--fw, 700);
+  }
 }

@@ -129,38 +129,6 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                  Text Type                                 */
-/* -------------------------------------------------------------------------- */
-.text-sm {
-  color: var(--color, var(--gray600));
-  font-size: var(--fs, var(--font-sm));
-  line-height: var(--lh, var(--lh-sm));
-  letter-spacing: var(--ls, var(--ls-sm));
-  font-weight: var(--fw, 400);
-}
-.text-base {
-  color: var(--color, var(--gray600));
-  font-size: var(--fs, var(--font-base));
-  line-height: var(--lh, var(--lh-base));
-  letter-spacing: var(--ls, var(--ls-base));
-  font-weight: var(--fw, 400);
-}
-.text-md {
-  color: var(--color, var(--gray600));
-  font-size: var(--fs, var(--font-md));
-  line-height: var(--lh, var(--lh-md));
-  letter-spacing: var(--ls, var(--ls-md));
-  font-weight: var(--fw, 400);
-}
-
-strong,
-b {
-  &[class*='text-'] {
-    font-weight: var(--fw, 700);
-  }
-}
-
-/* -------------------------------------------------------------------------- */
 /*                                   Rounded                                  */
 /* -------------------------------------------------------------------------- */
 .rounded-base {

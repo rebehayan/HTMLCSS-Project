@@ -1,9 +1,18 @@
+@layer Reset, print, atom, molecules, organisms;
 /* 기초정의 */
-@import url(./reset.css);
-@import url(./print.css);
+@import url(./reset.css) layer(Reset);
+@import url(./print.css) layer(print);
 @import url(./debug.css);
 
 /* 디자인정의 */
-@import url(./atomic.css);
-@import url(./button.css);
-@import url(./badge.css);
+@import url(./atomic.css) layer(atom.basic);
+@import url(./typography.css) layer(atom.typography);
+@import url(./button.css) layer(atom.button);
+@import url(./badge.css) layer(atom.badge);
+@import url(./textfield.css) layer(molecules.textfield);
+@import url(./radio.css) layer(molecules.radio);
+@import url(./checkbox.css) layer(molecules.checkbox);
+@import url(./select.css) layer(molecules.select);
+@import url(./switch.css) layer(molecules.switch);
+@import url(./floatingLabel.css) layer(molecules.floatingLabel);
+@import url(./table.css) layer(organisms.table);

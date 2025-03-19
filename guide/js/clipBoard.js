@@ -47,6 +47,11 @@ const css = () => {
     body {
       padding:2rem;
     }
+    .copy-group {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
+      gap:1rem;
+    }
     .copy {
       position:relative;
       border:2px dashed gray;

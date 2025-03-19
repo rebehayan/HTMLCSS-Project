@@ -1,14 +1,14 @@
-import { removeClass } from "./helper.js";
+import { removeClass } from './helper.js';
 
 export const frame = () => {
-  const links = document.querySelectorAll(".sidebar a");
-  const frame = document.querySelector("iframe");
-  const frameSrc = sessionStorage.getItem("src");
+  const links = document.querySelectorAll('.sidebar a');
+  const frame = document.querySelector('iframe');
+  const frameSrc = sessionStorage.getItem('src');
   if (!frame) return;
 
   // 프레임CSS
   const frameCSS = () => {
-    const style = frame.contentWindow.document.createElement("style");
+    const style = frame.contentWindow.document.createElement('style');
     style.textContent = /* css */ `
       body{ 
         &::-webkit-scrollbar {
@@ -26,6 +26,9 @@ export const frame = () => {
         > h2:not([class]) {
           margin-block:40px 20px;
           font-size:20px;
+          &:first-child {
+            margin-top:0;
+          }
         }
       }
       .guide-block {
@@ -41,13 +44,13 @@ export const frame = () => {
   };
 
   if (frameSrc) {
-    frame.setAttribute("src", frameSrc);
+    frame.setAttribute('src', frameSrc);
     links.forEach((link) => {
       const linkText = link.textContent.toLocaleLowerCase();
 
       if (frameSrc.includes(linkText)) {
         removeClass(links);
-        link.classList.add("active");
+        link.classList.add('active');
       }
     });
   }

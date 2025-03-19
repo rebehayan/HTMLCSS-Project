@@ -24,6 +24,10 @@
   &:disabled {
     background-color: var(--disabledColor);
   }
+  &.error {
+    border: 1px solid var(--danger);
+    color: var(--danger);
+  }
 }
 textarea {
   &.text-field {

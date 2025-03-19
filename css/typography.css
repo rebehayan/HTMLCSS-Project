@@ -47,3 +47,9 @@ b {
     font-weight: var(--fw, 700);
   }
 }
+
+.link {
+  text-decoration: underline 2px;
+  text-decoration-color: red;
+  text-underline-offset: 3px;
+}

@@ -7,4 +7,3 @@ frame();
 navigation();
 centered();
 header();
-spacing();

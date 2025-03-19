@@ -4,7 +4,7 @@
   --fontSize: 15px;
   --beforeColor: gray;
   --afterColor: blue;
-  --pl: 20px;
+  --pl: 3rem;
   --height: 24px;
 
   display: inline-flex;

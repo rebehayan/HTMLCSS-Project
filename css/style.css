@@ -1,6 +1,6 @@
-@layer Reset, print, atom, molecules, organisms;
+@layer reset, print, atom, molecules, organisms;
 /* 기초정의 */
-@import url(./reset.css) layer(Reset);
+@import url(./reset.css) layer(reset);
 @import url(./print.css) layer(print);
 @import url(./debug.css);
 

@@ -38,7 +38,7 @@
 
         // hex코드 추출
         const spanColor = getComputedStyle(span).getPropertyValue(`--${className}${100 * (index + 1)}`);
-        span.insertAdjacentHTML("afterend", `<div>${spanColor}</div>`);
+        span.insertAdjacentHTML("afterend", `<div>${spanColor || 'No color defined'}</div>`);
       }
     });
   </script>

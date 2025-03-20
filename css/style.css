@@ -1,4 +1,4 @@
-@layer reset, print, atom, molecules, organisms, template, page;
+@layer reset, print, atom, molecules, organisms, template, page, utillity;
 
 /* 기초정의 */
 @import url(./reset.css) layer(reset);
@@ -6,7 +6,8 @@
 @import url(./debug.css);
 
 /* 원자 */
-@import url(./atomic.css) layer(atom.basic);
+@import url(./variable.css) layer(atom.variable);
+@import url(./utillity.css) layer(utillity);
 @import url(./typography.css) layer(atom.typography);
 @import url(./button.css) layer(atom.button);
 @import url(./badge.css) layer(atom.badge);

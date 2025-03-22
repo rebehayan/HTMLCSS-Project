@@ -7,7 +7,9 @@
   --fontSize: 1.4rem;
   --color: var(--gray700);
   --placeholderColor: var(--gray500);
-  --disabledColor: var(--gray200);
+  --disabled: 0.4;
+  --hoverBorderColor: var(--gray800);
+  --focusBorderColor: var(--gray800);
 
   padding-inline: var(--paddingX);
   padding-block: var(--paddingY, 0);
@@ -21,8 +23,15 @@
   &::placeholder {
     color: var(--placeholderColor);
   }
+  &:hover {
+    border-color: var(--hoverBorderColor);
+  }
+  &:focus {
+    border-color: var(--focusBorderColor);
+    outline: none;
+  }
   &:disabled {
-    background-color: var(--disabledColor);
+    opacity: var(--disabled);
   }
   &.error {
     border: 1px solid var(--danger);

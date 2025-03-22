@@ -51,6 +51,9 @@ const css = () => {
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
       gap:1rem;
+      .copy {
+        margin:0;
+      }
     }
     .copy {
       position:relative;

@@ -104,7 +104,8 @@ h1 {
         background-color: var(--summaryActiveColor);
         color: #fff;
         &::after {
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="white"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>') no-repeat center / contain;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="white"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>')
+            no-repeat center / contain;
           rotate: 90deg;
         }
       }
@@ -128,8 +129,9 @@ h1 {
     transition: 0.4s;
     cursor: pointer;
     &::after {
-      content: "";
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="gray"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>') no-repeat center / contain;
+      content: '';
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g id="feArrowRight0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="feArrowRight1" fill="gray"><path id="feArrowRight2" d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z"/></g></g></svg>')
+        no-repeat center / contain;
       width: 1.4rem;
       aspect-ratio: 1;
       transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -148,7 +150,7 @@ h1 {
       padding-inline: 0;
     }
     &::before {
-      content: "-";
+      content: '-';
       margin-right: 1rem;
     }
     &.active {
@@ -186,9 +188,10 @@ iframe {
   justify-self: start;
   transition: 0.4s;
   background-color: #fff;
-  svg {
-    width: 3.5rem;
-  }
+  width: 3.5rem;
+  aspect-ratio: 1;
+  background: no-repeat center / contain;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%20%20%20%20%20%20%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20stroke-linecap%3D%22round%22%20d%3D%22M8%2010.5H40%22%20%2F%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20stroke-linecap%3D%22round%22%20d%3D%22M24%2019.5H40%22%20%2F%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20stroke-linecap%3D%22round%22%20d%3D%22M24%2028.5H40%22%20%2F%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20stroke-linecap%3D%22round%22%20d%3D%22M8%2037.5H40%22%20%2F%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%232F88FF%22%20d%3D%22M16%2019L8%2024L16%2029V19Z%22%20%2F%3E%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E');
 }
 .blank {
   display: flex;
@@ -198,7 +201,7 @@ iframe {
   line-height: 1;
   gap: 0.5rem;
   &::after {
-    content: "";
+    content: '';
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 32 32"><path fill="%23000" d="M28 4H10a2.006 2.006 0 0 0-2 2v14a2.006 2.006 0 0 0 2 2h18a2.006 2.006 0 0 0 2-2V6a2.006 2.006 0 0 0-2-2Zm0 16H10V6h18Z"/><path fill="%23000" d="M18 26H4V16h2v-2H4a2.006 2.006 0 0 0-2 2v10a2.006 2.006 0 0 0 2 2h14a2.006 2.006 0 0 0 2-2v-2h-2Z"/></svg>')
       no-repeat center / contain;
     width: 2rem;
@@ -213,8 +216,9 @@ iframe {
   line-height: 1;
   gap: 0.5rem;
   &::after {
-    content: "";
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="22" x="4" y="1" rx="3"/><path d="M10 19h4"/></g></svg>') no-repeat center / contain;
+    content: '';
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="16" height="22" x="4" y="1" rx="3"/><path d="M10 19h4"/></g></svg>')
+      no-repeat center / contain;
     width: 2rem;
     aspect-ratio: 1;
   }

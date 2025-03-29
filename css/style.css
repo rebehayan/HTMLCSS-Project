@@ -8,6 +8,7 @@
 /* 원자 */
 @import url(./variable.css) layer(atom.variable);
 @import url(./utillity.css) layer(utillity);
+@import url(./spacing.css) layer(utillity.spacing);
 @import url(./typography.css) layer(atom.typography);
 @import url(./button.css) layer(atom.button);
 @import url(./badge.css) layer(atom.badge);

@@ -1,4 +1,4 @@
-.pipe {
+[class*='pipe-'] {
   --width: 1px;
   --height: 10px;
   --marginX: 1rem;

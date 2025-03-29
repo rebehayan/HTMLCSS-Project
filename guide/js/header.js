@@ -14,7 +14,9 @@ const initNewTab = () => {
 
   button.textContent = responsiveText;
 
-  viewSize({ target: button });
+  frame.removeAttribute('style');
+
+  // viewSize({ target: button });
 
   linkTag.setAttribute('href', frameSrc || initHref);
 };

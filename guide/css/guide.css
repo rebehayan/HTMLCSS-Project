@@ -1,3 +1,4 @@
+@import url(../../css/reset.css);
 body {
   --bg: light-dark(#f2f3f6, #222);
   --summaryColor: #000;

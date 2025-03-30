@@ -10,10 +10,10 @@
 @import url(./utillity.css) layer(utillity);
 @import url(./spacing.css) layer(utillity.spacing);
 @import url(./typography.css) layer(atom.typography);
-@import url(./button.css) layer(atom.button);
-@import url(./badge.css) layer(atom.badge);
 
 /* 분자 */
+@import url(./button.css) layer(atom.button);
+@import url(./badge.css) layer(atom.badge);
 @import url(./textfield.css) layer(molecules.textfield);
 @import url(./radio.css) layer(molecules.radio);
 @import url(./checkbox.css) layer(molecules.checkbox);

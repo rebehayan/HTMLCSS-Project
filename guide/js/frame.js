@@ -42,6 +42,13 @@ export const frame = () => {
       }
     `;
     frame.contentWindow.document.head.append(style);
+
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      const html = frame.contentWindow.document.documentElement;
+      html.classList.add('dark');
+      html.style.setProperty('color-scheme', 'dark');
+    }
   };
 
   if (frameSrc) {

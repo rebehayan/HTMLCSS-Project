@@ -11,9 +11,10 @@ export const frame = () => {
     const style = frame.contentWindow.document.createElement('style');
     style.textContent = /* css */ `
       body{ 
+        background-color:light-dark(#fff, #333);
         &::-webkit-scrollbar {
           width: 10px;
-          background-color: rgba(0, 0, 0, 0.02);
+          background-color:rgba(0, 0, 0, 0.02);
         }
         &::-webkit-scrollbar-thumb {
           width: 10px;
@@ -32,7 +33,7 @@ export const frame = () => {
         }
       }
       .guide-block {
-        border:1px dashed #7c7c7c;
+        border:1px dashed light-dark(#7c7c7c, #fcfcfc);
         padding:10px;
         margin-block:10px;
         &.align[class*="v"] {

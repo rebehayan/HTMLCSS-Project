@@ -162,7 +162,7 @@ h1 {
 
 main {
   margin: 6rem 2rem 2rem;
-  background-color: #fff;
+  background-color: light-dark(#fff, #333);
   position: relative;
   text-align: center;
 }

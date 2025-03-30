@@ -63,12 +63,12 @@ const css = () => {
       min-height:1rem;
       .btn-copy {
         position:absolute;
-        right:0;
-        top:0;
+        right:-2px;
+        top:-2px;
         z-index:100;
         padding:0.7rem 1rem;
-        background:#000;
-        color:#fff;
+        background:light-dark(#000, #7c7c7c);
+        color:light-dark(#fff, #fff);
         font-size:1.4rem;
       }
     }

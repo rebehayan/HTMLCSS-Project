@@ -50,18 +50,34 @@ export const navigation = () => {
   const currentDetails = () => {
     if (!current) return;
 
+    const currentKeywords = current.toLowerCase().split(/[^a-z0-9]+/);
+
+    let bestMatch = null;
+    let bestMatchCount = 0;
+
     links.forEach((link) => {
-      const linkText = link.textContent.toLocaleLowerCase();
+      if (!link.getAttribute('href')) return;
 
-      if (current.includes(linkText)) {
-        details.forEach((detail) => detail.removeAttribute('open'));
+      const linkWords = link.textContent.toLowerCase().split(/\s+/);
+      const matchCount = linkWords.filter((word) => currentKeywords.includes(word)).length;
 
-        const parentDetail = link.closest('details');
-        if (parentDetail) {
-          parentDetail.setAttribute('open', true);
-        }
+      if (matchCount > bestMatchCount) {
+        bestMatch = link;
+        bestMatchCount = matchCount;
       }
     });
+
+    if (bestMatch) {
+      details.forEach((detail) => detail.removeAttribute('open'));
+      links.forEach((link) => link.classList.remove('active'));
+
+      const parentDetail = bestMatch.closest('details');
+      bestMatch.classList.add('active');
+
+      if (parentDetail) {
+        parentDetail.setAttribute('open', true);
+      }
+    }
   };
 
   currentDetails();

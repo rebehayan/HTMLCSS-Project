@@ -11,7 +11,6 @@ export const frame = () => {
     const style = frame.contentWindow.document.createElement('style');
     style.textContent = /* css */ `
       body{ 
-        background-color:light-dark(#fff, #333);
         &::-webkit-scrollbar {
           width: 10px;
           background-color:rgba(0, 0, 0, 0.02);

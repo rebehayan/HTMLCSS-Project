@@ -6,7 +6,7 @@
 }
 
 [class*='pipe-'] {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   > * {
     display: flex;

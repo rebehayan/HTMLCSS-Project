@@ -1,5 +1,7 @@
 body {
+  background-color: var(--white);
   font-size: var(--fs, var(--font-base));
+  color: var(--gray900);
 }
 .text-xs {
   color: var(--color, var(--gray900));

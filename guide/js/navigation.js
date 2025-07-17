@@ -1,8 +1,11 @@
 import { removeClass } from './helper.js';
+import { GNB } from './GNB.js';
 
 const mobileSize = 1280;
 
-export const navigation = () => {
+export const navigation = async () => {
+  const gnb = await GNB();
+
   const sidebar = document.querySelector('.sidebar');
   const links = sidebar.querySelectorAll('a');
   const current = sessionStorage.getItem('src');
@@ -14,10 +17,10 @@ export const navigation = () => {
 
   links.forEach((link) => {
     // 빈메뉴 삭제
-    if (!link.getAttribute('href')) {
-      link.parentElement.remove();
-      return;
-    }
+    // if (!link.getAttribute('href')) {
+    //   link.parentElement.remove();
+    //   return;
+    // }
 
     link.addEventListener('click', (e) => {
       if (window.innerWidth < mobileSize) {
@@ -48,7 +51,11 @@ export const navigation = () => {
 
   // 현재 위치활성화
   const currentDetails = () => {
-    if (!current) return;
+    if (!current) {
+      details[0].setAttribute('open', true);
+      links[0].classList.add('active');
+      return;
+    }
 
     const currentKeywords = current.toLowerCase().split(/[^a-z0-9]+/);
 

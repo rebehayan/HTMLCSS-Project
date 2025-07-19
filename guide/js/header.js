@@ -13,6 +13,7 @@ const initNewTab = (links) => {
   button.textContent = responsiveText;
 
   frame.removeAttribute('style');
+  viewSize(responsiveText);
   linkTag.setAttribute('href', frameSrc || initHref);
 };
 
@@ -21,23 +22,21 @@ const newTab = (link) => {
   linkTag.setAttribute('href', link.getAttribute('href'));
 };
 
-const viewSize = (e) => {
-  if (!frame || !e.target) return;
-
-  const text = e.target.textContent;
+const viewSize = (text) => {
+  if (!frame) return;
 
   switch (text) {
     case '모바일 보기':
       frame.style.width = '360px';
-      e.target.textContent = '웹 보기';
+      button.textContent = '웹 보기';
       break;
     case '타블렛 보기':
       frame.style.width = '720px';
-      e.target.textContent = '모바일 보기';
+      button.textContent = '모바일 보기';
       break;
     case '웹 보기':
       frame.removeAttribute('style');
-      e.target.textContent = '타블렛 보기';
+      button.textContent = '타블렛 보기';
       break;
   }
 };
@@ -45,9 +44,9 @@ const viewSize = (e) => {
 const viewMobile = () => {
   if (!button) return;
 
-  button.addEventListener('click', (e) => {
-    sessionStorage.setItem('responsive', e.target.textContent);
-    viewSize(e);
+  button.addEventListener('click', () => {
+    sessionStorage.setItem('responsive', button.textContent);
+    viewSize(button.textContent);
   });
 };
 

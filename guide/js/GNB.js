@@ -1,3 +1,5 @@
+import { header } from './header.js';
+
 const getData = async () => {
   try {
     const response = await fetch('/guide/data/gnb.json');
@@ -33,4 +35,7 @@ export const GNB = async () => {
       `;
     })
     .join('');
+
+  const links = gnbEl.querySelectorAll('a');
+  header(links);
 };

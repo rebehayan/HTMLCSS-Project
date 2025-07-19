@@ -2,11 +2,9 @@ const mobileSize = 1280;
 const frame = document.querySelector('iframe');
 const button = document.querySelector('.btn-mobile');
 const linkTag = document.querySelector('.blank');
-const gnb = document.querySelector('#gnb');
-const links = gnb ? gnb.querySelectorAll('a') : [];
 
-const initNewTab = () => {
-  if (!linkTag || !button || links.length === 0) return;
+const initNewTab = (links) => {
+  if (!linkTag || !button) return;
 
   const initHref = links[0].getAttribute('href');
   const frameSrc = sessionStorage.getItem('src');
@@ -15,9 +13,6 @@ const initNewTab = () => {
   button.textContent = responsiveText;
 
   frame.removeAttribute('style');
-
-  // viewSize({ target: button });
-
   linkTag.setAttribute('href', frameSrc || initHref);
 };
 
@@ -64,8 +59,8 @@ const resizeButton = () => {
 window.addEventListener('resize', resizeButton);
 window.addEventListener('load', resizeButton);
 
-export const header = () => {
-  initNewTab();
+export const header = (links) => {
+  initNewTab(links);
 
   links.forEach((link) => {
     link.addEventListener('click', () => {

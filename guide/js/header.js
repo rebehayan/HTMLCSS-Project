@@ -8,7 +8,7 @@ const initNewTab = (links) => {
 
   const initHref = links[0].getAttribute('href');
   const frameSrc = sessionStorage.getItem('src');
-  const responsiveText = sessionStorage.getItem('responsive') || '타블렛 보기';
+  const responsiveText = sessionStorage.getItem('responsive') || '웹 보기';
 
   button.textContent = responsiveText;
 

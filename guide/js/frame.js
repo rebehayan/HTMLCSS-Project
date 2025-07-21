@@ -3,7 +3,7 @@ import { removeClass } from './helper.js';
 export const frame = () => {
   const links = document.querySelectorAll('.sidebar a');
   const frame = document.querySelector('iframe');
-  const frameSrc = sessionStorage.getItem('src');
+  const frameSrc = sessionStorage.getItem('src') || './guide/colors.html';
   if (!frame) return;
 
   // 프레임CSS

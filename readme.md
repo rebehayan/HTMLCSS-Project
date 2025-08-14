@@ -9,7 +9,7 @@
 ## 코드
 
 ```bash
-npx degit rebehayan/HTMLCSS-Project .
+npx degit rebehayan/HTMLCSS-Project#release .
 ```
 
 > **degit이란?**<br>

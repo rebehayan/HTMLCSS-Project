@@ -20,7 +20,7 @@
       { "text": "Avatar", "href": null },
       { "text": "Breadcrumb", "href": null },
       { "text": "Pagination", "href": null },
-      { "text": "Tabs", "href": null },
+      { "text": "Tabs", "href": "./guide/tabs.html" },
       { "text": "Pipe UI", "href": "./guide/pipe.html" },
       { "text": "Forms", "href": "./guide/forms.html" },
       { "text": "Dialog", "href": null },

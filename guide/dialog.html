@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dialog</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="module" src="./js/clipBoard.js"></script>
+</head>
+
+<body>
+  <h2>기본</h2>
+  <div class="copy-group">
+    <div class="copy">
+      <button class="btn base primary" popovertarget="popup1">팝업열기</button>
+      <div popover id="popup1" class="dialog">
+        <div class="dialog-header">
+          <h2>팝업제목</h2>
+          <button class="btn-dialog-close" aria-label="닫기" popovertarget="popup1"></button>
+        </div>
+        팝업내용
+      </div>
+    </div>
+    <div class="copy">
+      <button class="btn base primary" popovertarget="popup2">Small 팝업열기</button>
+      <div popover id="popup2" class="dialog sm">
+        <div class="dialog-header">
+          <h2>팝업제목</h2>
+          <button class="btn-dialog-close" aria-label="닫기" popovertarget="popup2"></button>
+        </div>
+        팝업내용
+      </div>
+    </div>
+    <div class="copy">
+      <button class="btn base primary" popovertarget="popup3">Medium 팝업열기</button>
+      <div popover id="popup3" class="dialog md">
+        <div class="dialog-header">
+          <h2>팝업제목</h2>
+          <button class="btn-dialog-close" aria-label="닫기" popovertarget="popup3"></button>
+        </div>
+        팝업내용
+      </div>
+    </div>
+  </div>
+  <h2>With Backdrop</h2>
+  <div class="copy">
+    <button class="btn base primary" popovertarget="popup4">팝업열기</button>
+    <div popover id="popup4" class="dialog backdrop">
+      <div class="dialog-header">
+        <h2>팝업제목</h2>
+        <button class="btn-dialog-close" aria-label="닫기" popovertarget="popup4"></button>
+      </div>
+      팝업내용
+    </div>
+  </div>
+  <h2>With Animation</h2>
+  <div class="copy">
+    <button class="btn base primary" popovertarget="popup5">팝업열기</button>
+    <div popover id="popup5" class="dialog backdrop animation">
+      <div class="dialog-header">
+        <h2>팝업제목</h2>
+        <button class="btn-dialog-close" aria-label="닫기" popovertarget="popup5"></button>
+      </div>
+      팝업내용
+    </div>
+  </div>
+  <script type="module">
+    import { Popover } from '../js/Dialog.js';
+    Popover((id) => {
+      console.log('Popover ID:', id);
+    });
+  </script>
+</body>
+
+</html>

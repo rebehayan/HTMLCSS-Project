@@ -5,8 +5,19 @@
   }
 }
 .table-type2 {
-  th,
-  td {
-    border: 1px solid var(--gray400);
+  --col1: 15rem;
+  > .row {
+    display: grid;
+    grid-template-columns: var(--col1) 1fr;
+    border-bottom: 1px solid var(--gray400);
+    > .vt {
+      align-self: start;
+    }
+    > .vm {
+      align-self: end;
+    }
+    > .vb {
+      align-self: bottom;
+    }
   }
 }

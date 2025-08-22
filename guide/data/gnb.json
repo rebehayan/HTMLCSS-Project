@@ -6,6 +6,7 @@
       { "text": "Typography", "href": "./guide/typography.html" },
       { "text": "Align", "href": "./guide/align.html" },
       { "text": "Spacing", "href": "./guide/spacing.html" },
+      { "text": "Rounded", "href": "./guide/rounded.html" },
       { "text": "Shadows", "href": null },
       { "text": "Icons", "href": null }
     ]
@@ -23,7 +24,7 @@
       { "text": "Tabs", "href": "./guide/tabs.html" },
       { "text": "Pipe UI", "href": "./guide/pipe.html" },
       { "text": "Forms", "href": "./guide/forms.html" },
-      { "text": "Dialog", "href": null },
+      { "text": "Dialog", "href": "./guide/dialog.html" },
       { "text": "Navigation", "href": null }
     ]
   },
@@ -38,7 +39,7 @@
       { "text": "Tag", "href": null },
       { "text": "Card", "href": null },
       { "text": "Gallery", "href": null },
-      { "text": "Carousel", "href": null },
+      { "text": "Carousel", "href": "./guide/carousel.html" },
       { "text": "Tables", "href": "./guide/tables.html" },
       { "text": "Form Group", "href": null },
       { "text": "Button Group", "href": null },

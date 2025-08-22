@@ -11,7 +11,7 @@
 
 <body>
   <h2>Basic Table</h2>
-  <p>단순한 데이터 표시용 테이블 디자인. 기능 없음 (정렬, 필터, 검색 X)</p>
+  <p class="text-sm">단순한 데이터 표시용 테이블 디자인. 기능 없음 (정렬, 필터, 검색 X)</p>
   <div class="copy">
     <table class="table-type1">
       <caption>표제목</caption>
@@ -37,33 +37,26 @@
     </table>
   </div>
   <div class="copy">
-    <table class="table-type2">
-      <caption>표제목</caption>
-      <colgroup>
-        <col style="width:15rem;">
-        <col>
-      </colgroup>
-      <tbody>
-        <tr>
-          <th>제목</th>
-          <td>내용</td>
-        </tr>
-        <tr>
-          <th>제목</th>
-          <td>내용</td>
-        </tr>
-        <tr>
-          <th>제목</th>
-          <td>내용</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-type2">
+      <div class="row">
+        <div class="title" aria-labelledby="title1">제목</div>
+        <div class="content" aria-labelledby="content1">내용</div>
+      </div>
+      <div class="row">
+        <div class="title" aria-labelledby="title2">제목</div>
+        <div class="content" aria-labelledby="content2">내용</div>
+      </div>
+      <div class="row">
+        <div class="title" aria-labelledby="title3">제목</div>
+        <div class="content" aria-labelledby="content3">내용</div>
+      </div>
+    </div>
   </div>
   <h2>Interactive Table</h2>
-  <p>개별 셀에 기능이 일부 포함된 테이블 디자인. 예: 특정 셀에 버튼, 링크, 드롭다운 포함</p>
+  <p class="text-sm">개별 셀에 기능이 일부 포함된 테이블 디자인. 예: 특정 셀에 버튼, 링크, 드롭다운 포함</p>
   <div class="copy"></div>
   <h2>Composite Table</h2>
-  <p>
+  <p class="text-sm">
     다른 분자(Molecule)와 조합된 테이블 디자인. 예: 검색 바 + 필터 + 페이지네이션 + 정렬 기능 포함
   </p>
   <div class="copy"></div>

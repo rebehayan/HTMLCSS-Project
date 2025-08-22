@@ -1,4 +1,6 @@
-@layer reset, print, atom, molecules, organisms, template, page, utillity;
+@layer swiper, reset, print, atom, molecules, organisms, template, page, utillity;
+
+@import url(./swiper.css) layer(swiper);
 
 /* 기초정의 */
 @import url(./reset.css) layer(reset);
@@ -7,8 +9,9 @@
 
 /* 원자 */
 @import url(./variable.css) layer(atom.variable);
-@import url(./utillity.css) layer(utillity);
+@import url(./align.css) layer(utillity.align);
 @import url(./spacing.css) layer(utillity.spacing);
+@import url(./rounded.css) layer(utillity.rounded);
 @import url(./typography.css) layer(atom.typography);
 
 /* 분자 */
@@ -23,9 +26,11 @@
 @import url(./floatingLabel.css) layer(molecules.floatingLabel);
 @import url(./date.css) layer(molecules.date);
 @import url(./pipe.css) layer(molecules.pipe);
+@import url(./dialog.css) layer(molecules.dialog);
 
 /* 유기체 */
 @import url(./table.css) layer(organisms.table);
+@import url(./carousel.css) layer(organisms.carousel);
 
 /* 템플릿 */
 /* 페이지 */

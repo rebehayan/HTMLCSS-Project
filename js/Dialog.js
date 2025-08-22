@@ -1,10 +1,3 @@
-/**
- * Dialog(id, options)
- * @param {string} id - data-dialog / open/close 트리거에 쓰는 식별자
- * @param {boolean|object} options - 기존처럼 boolean이면 modal 여부만, 객체면 상세 옵션
- *   - modal: boolean = false
- *   - closeOnBackdrop: boolean = false
- */
 export const Dialog = (id, options = {}) => {
   const normalized = typeof options === 'boolean' ? { modal: options } : options;
 
@@ -47,4 +40,20 @@ export const Dialog = (id, options = {}) => {
   }
 
   return { show: showDialog, hide: hideDialog };
+};
+
+export const Popover = (callback) => {
+  const popovers = document.querySelectorAll('[popover]');
+  if (popovers.length == 0) return;
+
+  popovers.forEach((popover) => {
+    const btnClose = popover.querySelector('.btn-dialog-close');
+    const popoverID = popover.getAttribute('id');
+
+    if (!btnClose) return;
+
+    btnClose.addEventListener('click', () => {
+      if (callback) callback(popoverID);
+    });
+  });
 };

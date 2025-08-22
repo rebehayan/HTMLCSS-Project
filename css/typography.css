@@ -1,6 +1,5 @@
 body {
   background-color: var(--white);
-  font-size: var(--fs, var(--font-base));
   color: var(--gray900);
 }
 .text-xs {
@@ -57,4 +56,20 @@ b {
   text-decoration: underline 2px;
   text-decoration-color: red;
   text-underline-offset: 3px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Text Color                                 */
+/* -------------------------------------------------------------------------- */
+.text-primary {
+  color: var(--primary, #000);
+}
+.text-secondary {
+  color: var(--secondary, #000);
+}
+.text-danger {
+  color: var(--danger, #000);
+}
+.text-success {
+  color: var(--success, #000);
 }

@@ -56,10 +56,8 @@
   ) {
   margin: 0;
   padding: 0;
-  /* font-family: "Noto Sans KR", sans-serif; */
-  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
-    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+  font-family: var(--fontFamily);
 }
 
 :where(body, input, select, textarea, button, img, fieldset) {
@@ -182,14 +180,14 @@
 :where(html) {
   padding: 0;
   margin: 0;
-  font-size: 62.5%;
+  font-size: var(--REM, 62.5%);
   -webkit-text-size-adjust: none;
 }
 
 :where(body) {
+  font-size: 1rem;
   padding: 0;
   margin: 0;
-  font-size: 1rem;
 }
 
 :where(caption, legend, .a11y-hidden) {

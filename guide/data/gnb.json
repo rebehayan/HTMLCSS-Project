@@ -26,7 +26,8 @@
       { "text": "Forms", "href": "./guide/forms.html" },
       { "text": "Dialog", "href": "./guide/dialog.html" },
       { "text": "Scroll", "href": "./guide/scroll.html" },
-      { "text": "Navigation", "href": "./guide/navigation.html" }
+      { "text": "Navigation", "href": "./guide/navigation.html" },
+      { "text": "Text List", "href": "./guide/textlist.html" }
     ]
   },
   {

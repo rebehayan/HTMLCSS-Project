@@ -30,6 +30,7 @@
 @import url(./tab.css) layer(molecules.tab);
 @import url(./navigation.css) layer(molecules.navigation);
 @import url(./scroll.css) layer(molecules.scroll);
+@import url(./textlist.css) layer(molecules.textlist);
 
 /* 유기체 */
 @import url(./table.css) layer(organisms.table);

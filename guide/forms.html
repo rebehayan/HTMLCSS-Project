@@ -11,13 +11,47 @@
 
 <body>
   <h2>Input Field</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--paddingX</strong>좌우여백</div>
+      <div><strong>--width</strong>최소가로크기</div>
+      <div><strong>--height</strong>높이</div>
+      <div><strong>--borderColor</strong>테두리색</div>
+      <div><strong>--rounded</strong>모서리둥글기</div>
+      <div><strong>--fontSize</strong>글자크기</div>
+      <div><strong>--color</strong>글자색</div>
+      <div><strong>--placeholderColor</strong>플레이스홀더색</div>
+      <div><strong>--hoverBorderColor</strong>호버테두리색</div>
+      <div><strong>--focusBorderColor</strong>포커스테두리색</div>
+      <div><strong>--readonlyBorderColor</strong>읽기전용테두리색</div>
+      <div><strong>--readonlyBgColor</strong>읽기전용배경색</div>
+      <div><strong>--disabledBorderColor</strong>비활성화테두리색</div>
+      <div><strong>--disabledBgColor</strong>비활성화배경색</div>
+    </div>
+  </details>
   <div class="copy-group">
     <div class="copy"><input type="text" class="text-field" value="입력된 상태"></div>
     <div class="copy"><input type="text" class="text-field" placeholder="placeholder"></div>
-    <div class="copy"><input type="text" class="text-field" disabled></div>
-    <div class="copy"><input type="text" class="text-field error" value="오류메세지"></div>
+    <div class="copy"><input type="text" class="text-field" disabled value="disabled"></div>
+    <div class="copy"><input type="text" class="text-field" readonly value="readonly"></div>
+    <div class="copy"><input type="text" class="text-field error" value=".error"></div>
   </div>
   <h2>Select</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--height</strong>높이</div>
+      <div><strong>--pl</strong>좌측여백</div>
+      <div><strong>--pr</strong>우측여백</div>
+      <div><strong>--rounded</strong>모서리둥글기</div>
+      <div><strong>--borderColor</strong>테두리색</div>
+      <div><strong>--arrowImage</strong>화살표이미지</div>
+      <div><strong>--bgColor</strong>배경색</div>
+      <div><strong>--fontSize</strong>글자크기</div>
+      <div><strong>--fontColor</strong>글자색</div>
+    </div>
+  </details>
   <div class="copy">
     <select class="select">
       <option>선택하세요.</option>
@@ -28,6 +62,18 @@
     <textarea class="text-field"></textarea>
   </div>
   <h2>Checkbox</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--offImage</strong>선택전이미지</div>
+      <div><strong>--onImage</strong>선택후이미지</div>
+      <div><strong>--fontSize</strong>글자크기</div>
+      <div><strong>--offColor</strong>비활성화색</div>
+      <div><strong>--onColor</strong>활성화색</div>
+      <div><strong>--pl</strong>좌측여백</div>
+      <div><strong>--height</strong>높이</div>
+    </div>
+  </details>
   <div class="copy">
     <div class="checkbox"><input type="checkbox" checked id="check1" /><label for="check1">선택1</label><br /></div>
     <div class="checkbox"><input type="checkbox" id="check2" /><label for="check2">선택2</label></div>
@@ -37,6 +83,18 @@
     <div class="checkbox"><input type="checkbox" id="check4" /><label for="check4"></label></div>
   </div>
   <h2>Radio</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--offImage</strong>선택전이미지</div>
+      <div><strong>--onImage</strong>선택후이미지</div>
+      <div><strong>--fontSize</strong>글자크기</div>
+      <div><strong>--offColor</strong>비활성화색</div>
+      <div><strong>--onColor</strong>활성화색</div>
+      <div><strong>--pl</strong>좌측여백</div>
+      <div><strong>--height</strong>높이</div>
+    </div>
+  </details>
   <div class="copy">
     <div class="radio"><input type="radio" name="radio-group" checked id="radio1" /><label for="radio1">선택1</label>
     </div>
@@ -55,6 +113,22 @@
     </div>
   </div>
   <h2>Chip</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--borderOnColor</strong>활성화선색</div>
+      <div><strong>--borderOffColor</strong>비활성화선색</div>
+      <div><strong>--fontOnColor</strong>활성화글자색</div>
+      <div><strong>--fontOffColor</strong>비활성화글자색</div>
+      <div><strong>--bgOnColor</strong>활성화배경색</div>
+      <div><strong>--bgOffColor</strong>비활성화배경색</div>
+      <div><strong>--px</strong>좌우패딩</div>
+      <div><strong>--py</strong>상하패딩</div>
+      <div><strong>--fontSize</strong>글자크기</div>
+      <div><strong>--rounded</strong>모서리둥글기</div>
+      <div><strong>--gap</strong>간격</div>
+    </div>
+  </details>
   <div class="copy">
     <div class="chip">
       <input type="radio" id="chip1" name="chip" checked><label for="chip1">선택1</label>
@@ -71,6 +145,17 @@
     </div>
   </div>
   <h2>Input Date</h2>
+  <details class="variable">
+    <summary>특정 컴포넌트 소속에 따라 디자인이 일부 변형될경우 변수로 제어합니다.</summary>
+    <div class="list">
+      <div><strong>--bg</strong>달력아이콘 ex) url(경로)</div>
+      <div><strong>--paddingRight</strong>우측여백</div>
+      <div><strong>--paddingLeft</strong>좌측여백</div>
+      <div><strong>--height</strong>높이</div>
+      <div><strong>--rounded</strong>모서리둥글기</div>
+      <div><strong>--borderColor</strong>테두리색</div>
+    </div>
+  </details>
   <div class="copy">
     <input type="date" data-placeholder="시작일" required />
   </div>

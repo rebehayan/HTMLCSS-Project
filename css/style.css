@@ -27,6 +27,9 @@
 @import url(./date.css) layer(molecules.date);
 @import url(./pipe.css) layer(molecules.pipe);
 @import url(./dialog.css) layer(molecules.dialog);
+@import url(./tab.css) layer(molecules.tab);
+@import url(./navigation.css) layer(molecules.navigation);
+@import url(./scroll.css) layer(molecules.scroll);
 
 /* 유기체 */
 @import url(./table.css) layer(organisms.table);

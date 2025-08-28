@@ -8,6 +8,7 @@
   --bgColor: #fff;
   --fontSize: 19px;
   --fontColor: #1d1d1d;
+
   height: var(--height);
   padding-inline: var(--pl) var(--pr);
   border-radius: var(--rounded);

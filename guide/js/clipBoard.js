@@ -51,6 +51,7 @@ const css = () => {
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
       gap:1rem;
+      margin-block:2rem 3rem;
       .copy {
         margin:0;
       }
@@ -70,6 +71,39 @@ const css = () => {
         background:light-dark(#000, #7c7c7c);
         color:light-dark(#fff, #fff);
         font-size:1.4rem;
+      }
+    }
+    .variable {
+      font-size:1.4rem;
+      summary {
+        &::before{
+          content:'[변수가이드]';
+          margin-right:0.5rem;
+          background:light-dark(#f1effd, #7c7c7c);
+          color:light-dark(#6a5acd, #fff);
+          padding:0.2rem 0.5rem;
+          border-radius:0.3rem;
+          font-size:1.2rem;
+        }
+      }
+      .list {
+        display:grid;
+        gap:0.8rem;
+        padding-block:2rem 1rem;
+        > div {
+          color:light-dark(#000, #7c7c7c);
+          strong {
+            background:light-dark(rgba(255,150,0,0.1), #7c7c7c);
+            border-radius:0.3rem;
+            padding:0.3rem;
+            font-weight:normal;
+            font-size:1.2rem;
+            line-height:1;
+            &::after {
+              content:' : ';
+            }
+          }
+        }
       }
     }
   `;

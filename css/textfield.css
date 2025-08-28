@@ -7,13 +7,16 @@
   --fontSize: 1.4rem;
   --color: var(--gray700);
   --placeholderColor: var(--gray500);
-  --disabled: 0.4;
   --hoverBorderColor: var(--gray800);
   --focusBorderColor: var(--gray800);
+  --readonlyBorderColor: var(--gray500);
+  --readonlyBgColor: var(--gray100);
+  --disabledBorderColor: var(--gray500);
+  --disabledBgColor: var(--gray100);
 
   padding-inline: var(--paddingX);
   padding-block: var(--paddingY, 0);
-  width: var(--width);
+  min-width: var(--width);
   height: var(--height);
   border: 1px solid var(--borderColor);
   border-radius: var(--rounded);
@@ -31,8 +34,14 @@
     outline: none;
   }
   &:disabled {
-    opacity: var(--disabled);
+    border-color: var(--disabledBorderColor);
+    background-color: var(--disabledBgColor);
   }
+  &:read-only {
+    border-color: var(--readonlyBorderColor);
+    background-color: var(--readonlyBgColor);
+  }
+  &:invalid,
   &.error {
     border: 1px solid var(--danger);
     color: var(--danger);

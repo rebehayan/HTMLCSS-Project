@@ -8,7 +8,7 @@
       { "text": "Spacing", "href": "./guide/spacing.html" },
       { "text": "Rounded", "href": "./guide/rounded.html" },
       { "text": "Shadows", "href": null },
-      { "text": "Icons", "href": null }
+      { "text": "Icons", "href": "./guide/icons.html" }
     ]
   },
   {
@@ -27,7 +27,11 @@
       { "text": "Dialog", "href": "./guide/dialog.html" },
       { "text": "Scroll", "href": "./guide/scroll.html" },
       { "text": "Navigation", "href": "./guide/navigation.html" },
-      { "text": "Text List", "href": "./guide/textlist.html" }
+      { "text": "Text List", "href": "./guide/textlist.html" },
+      { "text": "Meta List", "href": null },
+      { "text": "Icon Text", "href": null },
+      { "text": "Quick", "href": null },
+      { "text": "Block", "href": null }
     ]
   },
   {
@@ -51,6 +55,8 @@
       { "text": "Datepicker", "href": null },
       { "text": "Accordion", "href": null },
       { "text": "Dialog", "href": null },
+      { "text": "State Feedback", "href": null },
+      { "text": "Diagram", "href": null },
       { "text": "Indicators", "href": null }
     ]
   },

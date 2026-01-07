@@ -1,0 +1,27 @@
+.ico-tel {
+  --icon: url(../../images/ico_tel.svg) no-repeat center / contain;
+  --size: 2.4rem;
+}
+.ico-tel-black {
+  --icon: url(../../images/ico_tel_black.svg) no-repeat center / contain;
+  --size: 2.4rem;
+}
+.icon {
+  width: var(--size);
+  aspect-ratio: 1;
+  background: var(--icon);
+}
+[class^='ico'] {
+  &.sm {
+    --size: 2.4rem;
+  }
+  &.md {
+    --size: 3.2rem;
+  }
+  &.lg {
+    --size: 4rem;
+  }
+  &.xxl {
+    --size: 6rem;
+  }
+}

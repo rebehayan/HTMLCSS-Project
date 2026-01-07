@@ -12,6 +12,7 @@
 @import url(./align.css) layer(utillity.align);
 @import url(./spacing.css) layer(utillity.spacing);
 @import url(./rounded.css) layer(utillity.rounded);
+@import url(./icons.css) layer(atom.icons);
 @import url(./typography.css) layer(atom.typography);
 
 /* 분자 */

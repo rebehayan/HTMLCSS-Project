@@ -1,3 +1,10 @@
+[data-tab-content] {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
 @scope (.tab-type1) {
   :scope {
     --tabBg: var(--white);

@@ -4,7 +4,7 @@
   --height: 4rem;
   --borderColor: var(--gray500);
   --rounded: 0.4rem;
-  --fontSize: 1.4rem;
+  --fs: 1.4rem;
   --color: var(--gray700);
   --placeholderColor: var(--gray500);
   --hoverBorderColor: var(--gray800);
@@ -22,7 +22,7 @@
   border-radius: var(--rounded);
   box-sizing: border-box;
   color: var(--color);
-  font-size: var(--fontSize);
+  font-size: var(--fs);
   &::placeholder {
     color: var(--placeholderColor);
   }

@@ -1,7 +1,7 @@
 .checkbox {
   --offImage: url(../images/ico_check_off.svg);
   --onImage: url(../images/ico_check_on.svg);
-  --fontSize: 15px;
+  --fs: 15px;
   --offColor: gray;
   --onColor: blue;
   --pl: 3rem;
@@ -37,7 +37,7 @@
   label {
     padding-left: var(--pl);
     background: var(--offImage) no-repeat left;
-    font-size: var(--fontSize);
+    font-size: var(--fs);
     color: var(--offColor);
     height: var(--height);
     align-content: center;

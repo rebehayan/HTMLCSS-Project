@@ -7,7 +7,7 @@
   --offBgColor: rgba(0, 0, 0, 0.05);
   --onColor: lightgreen;
   --onBgColor: green;
-  --textColor: #000;
+  --color: #000;
 
   input {
     position: absolute;
@@ -72,7 +72,7 @@
       white-space: nowrap;
       line-height: 1;
       transition: 0.4s;
-      color: var(--textColor);
+      color: var(--color);
     }
   }
 }

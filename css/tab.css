@@ -1,20 +1,20 @@
 @scope (.tab-type1) {
   :scope {
-    --tab-bg: var(--white);
-    --tab-border: 1px solid var(--gray400);
-    --tab-color: var(--black);
-    --tab-padding: 1rem;
-    --tab-radius: 0.5rem;
+    --tabBg: var(--white);
+    --tabBorder: 1px solid var(--gray400);
+    --tabColor: var(--black);
+    --tabPadding: 1rem;
+    --tabRadius: 0.5rem;
 
     display: flex;
-    border-bottom: var(--tab-border);
+    border-bottom: var(--tabBorder);
   }
   button {
-    background-color: var(--tab-bg);
+    background-color: var(--tabBg);
     border: none;
-    color: var(--tab-color);
-    padding: var(--tab-padding);
-    border-radius: var(--tab-radius);
+    color: var(--tabColor);
+    padding: var(--tabPadding);
+    border-radius: var(--tabRadius);
     font-size: 1.6rem;
 
     &:hover {
